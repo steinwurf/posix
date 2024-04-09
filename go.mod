@@ -1,3 +1,3 @@
-module gopkg.in/ro-ag/posix.v1
+module github.com/steinwurf/posix
 
 go 1.18
