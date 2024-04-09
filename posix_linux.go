@@ -229,6 +229,11 @@ func _Syscall6(trap, a1, a2, a3, a4, a5, a6 uintptr) (r1, r2 uintptr, err syscal
 func _RawSyscall(trap, a1, a2, a3 uintptr) (r1, r2 uintptr, err syscall.Errno)
 func _RawSyscall6(trap, a1, a2, a3, a4, a5, a6 uintptr) (r1, r2 uintptr, err syscall.Errno)
 
+//go:linkname _Syscall syscall.Syscall
+//go:linkname _Syscall6 syscall.Syscall6
+//go:linkname _RawSyscall syscall.RawSyscall
+//go:linkname _RawSyscall6 syscall.RawSyscall6
+
 /*--------------------------------------------------------------------------------------------------------------------*/
 //goland:noinspection GoSnakeCaseUsage
 const (
